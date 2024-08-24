@@ -18,5 +18,5 @@ app.get('/', (req, res) => {
 app.use(errorHandler);
 
 app.listen(env.PORT, () => {
-  logger.info(`Server running on port ${env.PORT}`);
+  logger.info(`Server running in ${env.NODE_ENV} mode on port ${env.PORT}`);
 });
