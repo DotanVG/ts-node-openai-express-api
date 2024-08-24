@@ -13,11 +13,27 @@
     "type": "git",
     "url": "git+https://github.com/DotanVG/ts-node-openai-express-api.git"
   },
-  "keywords": ["typescript", "node", "express", "openai", "api"],
+  "keywords": [
+    "typescript",
+    "node",
+    "express",
+    "openai",
+    "api"
+  ],
   "author": "Dotan Veretzky <dotanvg@gmail.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/DotanVG/ts-node-openai-express-api/issues"
   },
-  "homepage": "https://github.com/DotanVG/ts-node-openai-express-api#readme"
+  "homepage": "https://github.com/DotanVG/ts-node-openai-express-api#readme",
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^22.5.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.4"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2"
+  }
 }
