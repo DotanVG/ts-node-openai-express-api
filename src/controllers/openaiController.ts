@@ -21,3 +21,22 @@ export const generateText = async (req: Request, res: Response, next: NextFuncti
     }
   }
 };
+
+export const generateImage = async (req: Request, res: Response, next: NextFunction) => {
+  try {
+    const { prompt } = req.body;
+    if (!prompt) {
+      throw new AppError('Prompt is required', 400);
+    }
+    
+    const imageUrl = await openaiService.generateImage(prompt);
+    res.json({ result: imageUrl });
+  } catch (error) {
+    logger.error('Error in generateImage controller:', error);
+    if (error instanceof AppError) {
+      res.status(error.statusCode).json({ error: error.message });
+    } else {
+      res.status(500).json({ error: 'An unexpected error occurred' });
+    }
+  }
+};
